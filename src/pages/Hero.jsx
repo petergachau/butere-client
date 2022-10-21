@@ -49,9 +49,12 @@ function App() {
           }
 
           return (
-            <article className={position} key={id}>
+            <article style={{alignItems:'center'}} className={position} key={id}>
                 <p className="title">{title}</p>
-              <img src={image} alt={name} className="person-img" />
+                <div className="image">
+                                <img src={image} alt={name} className="person-img" />
+
+                </div>
               <h4>{name}</h4>
               
               <p className="title">{quote}</p>

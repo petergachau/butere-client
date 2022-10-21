@@ -20,7 +20,7 @@ export const navItems = [
   {
     id: 2,
     title: "library",
-    path: "/about",
+    path: "/library",
     nName: "nav-item",
     sName: "sidebar-item",
     icon: <Icons.FaBriefcase />,
@@ -28,7 +28,7 @@ export const navItems = [
   {
     id: 2,
     title: "Academics",
-    path: "/about",
+    path: "/academics",
     nName: "nav-item",
     sName: "sidebar-item",
     icon: <Icons.FaBriefcase />,
@@ -45,7 +45,7 @@ export const navItems = [
   {
     id: 4,
     title: "ContactUs",
-    path: "/contactus",
+    path: "/contact",
     nName: "nav-item",
     sName: "sidebar-item",
     icon: <Icons.FaPhone />,

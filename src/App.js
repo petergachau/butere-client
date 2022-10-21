@@ -10,6 +10,14 @@ import Topbar from './components/Topbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Submenu from './components/Submenu';
+import Library from './pages/Library'
+import Academics from './pages/Academics'
+import Tenders from './pages/Tenders'
+import Teachers from './pages/QickLinks/Teachers'
+import Stuffs from './pages/QickLinks/Stuffs'
+import Footer from './components/Footer'
+import Students from './pages/QickLinks/Students'
+import Contact from './pages/Contact';
 function App() {
   // const { cartItems, isLoading } = useSelector((store) => store.cart);
   // const { isOpen } = useSelector((store) => store.modal);
@@ -43,9 +51,19 @@ function App() {
     
     <Routes>
       <Route path='/' element={<Home/>}/>
-   <Route path='/products' element={<About/>}/>
+   <Route path='/about' element={<About/>}/>
+   <Route path='/academics' element={<Academics/>}/>
+   <Route path='/tenders' element={<Tenders/>}/>
+   <Route path='/contact' element={<Contact/>}/>
+   <Route path='/students' element={<Students/>}/>
+   <Route path='/teachers' element={<Teachers/>}/>
+   <Route path='/stuffs' element={<Stuffs/>}/>
+   <Route path='/library' element={<Library/>}/>
+   <Route path='/library' element={<Library/>}/>
+
     </Routes>
     </AppProvider>
+    <Footer/>
     </BrowserRouter>
     
   );

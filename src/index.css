@@ -103,6 +103,7 @@ p {
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  width: 10%;
 }
 .btn:hover {
   color: var(--clr-primary);
@@ -340,4 +341,99 @@ padding: 2rem;
   background-color: #fff;
   width: 65%;
   height: 15rem;
+}
+
+/* about */
+
+.main-about{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.split1{
+  width: 30%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.princi{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.governanace{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.split2{
+  width: 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main-library */
+.main-library{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.library{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url('https://images.pexels.com/photos/256431/pexels-photo-256431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+ opacity: 0.8; 
+ object-fit: cover;
+  color: #f1f5f8;
+  height: 90vh;
+  background-repeat: no-repeat;
+  align-items: center;
+
+  
+}
+.library img{
+  object-fit: cover;
+}
+.lib-books{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  
+
+
+}
+.img{
+  width: 20%;
+  object-fit: cover;
+ 
+}
+
+
+/* contact-main */
+.contact-main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+.message-form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
