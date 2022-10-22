@@ -16,6 +16,7 @@ const Students = () => {
 
     <div className="activities">
         <div className="students-titles">
+          <h4>Activities</h4>
             <p>sports:Football</p>
         <p>clubs:Football</p>
         <p>Responsibilities:Football</p>
@@ -28,6 +29,7 @@ const Students = () => {
         </div>
         <div className="revision-materials">
       <div className="sepaerate">
+        <h4>RevisionMaterials</h4>
        Mathematics   
 Business Studies 
 English.            
