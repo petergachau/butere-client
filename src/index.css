@@ -551,3 +551,49 @@ padding: 2rem;
   flex-direction: column;
   width: 20%;
 }
+
+/* .tenders */
+.tenders{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 3rem;
+}
+.tender-notice{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 65%;
+  background-color: #f1f5f8;
+  padding: 1rem;
+  gap: 3rem;
+  
+}
+
+.title-tender{
+  font-size: 1.5rem;
+  font-weight: bold;
+width: 40%;
+background-color: #102a42;
+color: #fff;
+border-radius: 7rem;
+text-align: center;
+
+}
+.tender-description{
+  
+  font-weight: bold;
+  width: 40%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(251, 253, 255);
+  text-align: center;
+}
