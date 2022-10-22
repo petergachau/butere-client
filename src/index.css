@@ -103,7 +103,7 @@ p {
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  width: 10%;
+ margin-top: 1rem;
 }
 .btn:hover {
   color: var(--clr-primary);
@@ -431,9 +431,123 @@ padding: 2rem;
   justify-content: center;
   padding: 1rem;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .message-form{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+
+/* teachers */
+
+.general-pages{
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: #617d98;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-topbar{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+.image-logo{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.personal-profile{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.teachers-contents{
+  display: flex;
+  justify-content: space-around;
+  gap: 8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.classes{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width:40%;
+  background-color: antiquewhite;
+  color: #102a42;
+  border-radius: 1rem;
+  align-items: center;
+}
+.announcemets{
+  width: 40%;
+  background-color: antiquewhite;
+  color: #102a42;
+  border-radius: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.te{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.activities{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width:100%;
+  background-color: antiquewhite;
+  color: #102a42;
+  border-radius: 1rem;
+  align-items: center;
+}
+.students-titles{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width:40%;
+  background-color:#102a42;
+  color:aliceblue;
+  border-radius: 1rem;
+  align-items: center;
+}
+.displine{
+  
+}
+.revision-materials{
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-around;
+  gap: 4rem;
+  width:40%;
+  background-color:#102a42;
+  color:aliceblue;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sepaerate{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.seo{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
 }

@@ -4,7 +4,7 @@ import {BsFacebook ,BsTwitter,BsInstagram} from 'react-icons/bs'
 import {MdAddIcCall,MdOutgoingMail} from 'react-icons/md'
 const Navbar = () => {
   
-  const { amount } = useSelector((store) => store.cart);
+
   return (
     <>
       <nav>

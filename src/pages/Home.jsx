@@ -8,7 +8,7 @@ import About from './About';
 import Hero from './Hero';
 import General from './General';
 const Home = () => {
-    const { isOpen } = useSelector((store) => store.modal);
+    
 
   return (
     <div className='home'>

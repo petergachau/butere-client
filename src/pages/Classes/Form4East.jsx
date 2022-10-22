@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Students = () => {
+const Form4East = () => {
   return (
     <div className="general-pages">
-
+<h3>form 4 east Class</h3>
 
     <div className="general-topbar">
       <div className="logo"><img src="https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?cs=srgb&dl=pexels-bess-hamiti-35537.jpg&fm=jpg" alt=""  className='image-logo'/></div>
@@ -26,35 +26,10 @@ const Students = () => {
 ★★★
 </h4>
         </div>
-        <div className="revision-materials">
-      <div className="sepaerate">
-       Mathematics   
-Business Studies 
-English.            
-                              
-Kiswahili                           
-Biology                                 
-Chemistry  
-Music
-Computer Studies 
-      </div>
-           <div className="seo">Physics 
-Geography  
-History
-CRE
-Woodwork 
-Agriculture 
-Computer Studies 
-
-</div>              
-
-      
-    </div>
        
     </div>
-    
     </div>
   )
 }
 
-export default Students
+export default Form4East

@@ -6,9 +6,7 @@ const General = () => {
         <div className="general-items">
             <div className="fees">
             Fees Structure</div>
-            <div className="ksceRes">
-                Kcse
-            </div>
+            
         </div>
         
             </div>

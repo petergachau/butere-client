@@ -35,7 +35,7 @@ function App() {
       </div>
       <div className="section-center">
         {people.map((person, personIndex) => {
-          const { id, image, name, title, quote } = person;
+          const { id, image, name, title, quote ,news,view} = person;
 
           let position = 'nextSlide';
           if (personIndex === index) {
@@ -50,15 +50,24 @@ function App() {
 
           return (
             <article style={{alignItems:'center'}} className={position} key={id}>
-                <p className="title">{title}</p>
+              <div className="title1">
+                <h4 className="title">{title}</h4>
+              </div>
+                
                 <div className="image">
                                 <img src={image} alt={name} className="person-img" />
-
+                                
+ <p className="quote">{quote}</p>
+ <div className="items">
+  <button className="btns">
+    {view}
+  </button>
+ </div>
+              <FaQuoteRight className="icon" />
                 </div>
               <h4>{name}</h4>
               
-              <p className="title">{quote}</p>
-              <FaQuoteRight className="icon" />
+             
             </article>
           );
         })}
