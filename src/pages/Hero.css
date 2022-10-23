@@ -58,19 +58,36 @@ Variables
       line-height: 1;
     }
   }
+  .title1{
+ display: flex;
+ flex-wrap: wrap;
+    margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  background-color: rgb(214, 201, 186);
+  border-radius: 7rem;
+  }
+  .quote{
+    width: 25%;
+  }
   /*  global classes */
   
   /* section */
   .section {
     width: 100%;
-    height: 20rem;
-    margin: 5rem auto;
+   
+    /* height: 20rem; */
+    /* margin: 5rem auto; */
     max-width: var(--max-width);
   }
   .image{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
   }
   @media screen and (min-width: 992px) {
     .section {
@@ -84,8 +101,9 @@ Variables
   */
   .title {
     text-align: center;
-    margin-bottom: 2rem;
+    
   }
+  
   .title h2 {
     display: flex;
     align-items: center;
@@ -101,9 +119,9 @@ Variables
   .section-center {
     margin: 0 auto;
     /* margin-top: 4rem; */
-    width: 80vw;
+    width: 100%;
     height: 450px;
-    max-width: 800px;
+    padding: 1rem;
     text-align: center;
     position: relative;
     object-fit: cover;
@@ -115,14 +133,15 @@ Variables
   .person-img {
     /* border-radius: 50%; */
     margin-bottom: 1rem;
-    width: 250px;
-    height: 250px;
+    width: 59%;
+    height: 20rem;
     object-fit: cover;
     border: 4px solid var(--clr-grey-8);
     box-shadow: var(--dark-shadow);
     align-items: center;
     /* margin-left: 22rem; */
     text-align: center;
+    border-radius: 1rem;
   }
   article h4 {
     text-transform: uppercase;
@@ -134,13 +153,7 @@ Variables
     margin-bottom: 0.75rem;
     color: var(--clr-grey-3);
   }
-  /* .text {
-    max-width: 35em;
-    margin: 0 auto;
-    margin-top: 2rem;
-    line-height: 2;
-    color: var(--clr-grey-5);
-  } */
+  
   /* .icon {
     font-size: 3rem;
     margin-top: 1rem;
@@ -162,6 +175,7 @@ Variables
     border-radius: var(--radius);
     cursor: pointer;
     transition: var(--transition);
+    margin-right:1rem ;
   }
   .prev:hover,
   .next:hover {
@@ -200,6 +214,10 @@ Variables
     height: 100%;
     opacity: 0;
     transition: var(--transition);
+    display: flex;
+    flex-wrap: wrap;
+   
+   
   }
   article.activeSlide {
     opacity: 1;

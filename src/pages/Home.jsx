@@ -10,7 +10,7 @@ import General from './General';
 import Activities from './Activities';
 import Summarypage from './Summarypage';
 const Home = () => {
-    const { isOpen } = useSelector((store) => store.modal);
+    
 
   return (
     <div className='home'>

@@ -1,11 +1,6 @@
 import React from 'react'
-import About from './About'
-import Academics from './Academics'
-import Library from './Library'
-import Contact from './Contact'
-import TenderS from './Tenders'
+
 import {Link} from 'react-router-dom';
-import './Summarypage.css'
 
 function Summarypage(props) {
   
