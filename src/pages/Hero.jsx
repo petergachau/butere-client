@@ -47,11 +47,12 @@ function App() {
           }
 
           return (
-            <article style={{alignItems:'center'}} className={position} key={id}>
+            
+            <article  style={{alignItems:'center'}} className={position } key={id}>
               <div className="title1">
                 <h4 className="title">{title}</h4>
               </div>
-                
+                <div className="hero">
                 <div className="image">
                                 <img src={image} alt={name} className="person-img" />
                                 
@@ -62,6 +63,7 @@ function App() {
   </button>
  </div>
               <FaQuoteRight className="icon" />
+              </div>
                 </div>
               <h4>{name}</h4>
               
