@@ -4,11 +4,9 @@ const General = () => {
   return (
     <div className='general'>
         <div className="general-items">
-            <div className="fees">
-            Fees Structure</div>
-            <div className="ksceRes">
-                Kcse
-            </div>
+           <button className='download' id='fee'> download feestructure</button>
+            
+
         </div>
         
             </div>

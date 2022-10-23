@@ -331,17 +331,17 @@ hr {
 }
 .general{
   width: 100%;
-  background-color:rgb(252, 236, 236);
+  /* background-color:rgb(252, 236, 236); */
 padding: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
-.general-items{
+/* .general-items{
   background-color: #fff;
   width: 65%;
   height: 15rem;
-}
+} */
 
 /* about */
 
@@ -436,4 +436,72 @@ padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.download{
+  border: black 2px solid;
+  background-color: rgb(124, 108, 111);
+  color: white;
+  padding: 3px;
+  border-radius: 2px;
+}
+.schoolinfo{
+  display: flex;
+  margin: auto;
+  margin-top: 70px;
+}
+.schoolindividualinfo{
+  display: block;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(175, 175, 175);
+  margin: 10px;
+
+}
+.Titlesinfo{
+  color: #151fdb;
+  font-size: 30px;
+  margin: 35%;
+
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+ .information{
+ 
+  display: flex;
+  /* margin: auto; */
+  margin-bottom: 50px;
+  margin-left: 10%;
+  
+  
+ 
+  
+ }
+ .items{
+  font-size: 20px;
+  color: black;
+ }
+ .otherinfo{
+  padding: 50px;
+  display: inline-block;
+ 
+  background-color: rgb(159, 149, 151);
+  height: 500px;
+  width:300px;
+  
+  border-left: 6px solid rgb(0, 0, 0);
+ }
+ .heading{
+  font-weight: bolder;
+  font-size: 26px;
+  color: white;
+ }
+
+.lists{
+  display: flex;
+  gap: 15%;
+  
 }

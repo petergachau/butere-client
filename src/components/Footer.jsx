@@ -2,7 +2,15 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      
+      
+          copyright&copy;{new Date().getFullYear()}
+          <span>WebDev</span> &nbsp;<br/><span> all rights reserved</span>
+          <span> &nbsp; developed by mary</span>
+       
+        
+    </div>
   )
 }
 
