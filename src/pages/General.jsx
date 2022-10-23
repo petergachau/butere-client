@@ -9,10 +9,9 @@ const General = () => {
             
 
 
-            <div className="fees">
-            Fees Structure</div>
             
-1
+            
+
         </div>
         
             </div>
