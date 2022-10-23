@@ -6,7 +6,7 @@ import './Hero.css'
 function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = React.useState(0);
-
+  const[number,setNumber]=useState(0)
   useEffect(() => {
     const lastIndex = people.length - 1;
     if (index < 0) {
@@ -29,9 +29,7 @@ function App() {
   return (
     <section className="section">
       <div className="title">
-        <h2>
-          
-        </h2>
+        
       </div>
       <div className="section-center">
         {people.map((person, personIndex) => {

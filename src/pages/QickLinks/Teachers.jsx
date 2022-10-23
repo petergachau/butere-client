@@ -29,8 +29,14 @@ const Teachers = () => {
   <p className='te'>Meeting at 10</p>
 </div>
     </div>
-    <div className="button btn">
-      Upload assignments
+    <div className="button">
+      <button className="btn">
+        Upload assignments
+      </button>
+      
+      <button className="btn">
+       <Link style={{color:'whitesmoke'}} to='/admin'> Admin</Link>
+      </button>
     </div>
  </div> )
 }

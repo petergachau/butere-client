@@ -23,6 +23,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { setUser } from './redux/features/authSlice';
 import Form4East from './pages/Classes/Form4East';
+import Admin from './pages/Admin';
 function App() {
   // const { cartItems, isLoading } = useSelector((store) => store.cart);
   // const { isOpen } = useSelector((store) => store.modal);
@@ -74,6 +75,8 @@ function App() {
    <Route path='/register' element={<Register/>}/>
    <Route path='/library' element={<Library/>}/>
    <Route path='/form4east' element={<Form4East/>}/>
+   <Route path='/admin' element={<Admin/>}/>
+
     </Routes>
    
     <Footer/>
