@@ -17,6 +17,7 @@ const Admin = () => {
         <div className="role-item">
 <h5>Teachers</h5>
 <h5>Stuffs</h5>
+<h5>Others</h5>
         </div>
     </div>
    </div>
