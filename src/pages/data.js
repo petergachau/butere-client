@@ -1,4 +1,11 @@
-const people = [
+
+
+
+const People =
+  
+  
+ 
+ [
   {
     id: 1,
     image:
@@ -13,10 +20,10 @@ const people = [
     image:
       'https://images.pexels.com/photos/1577882/pexels-photo-1577882.jpeg?auto=compress&cs=tinysrgb&w=600',
     name: 'Contac us',
-    view:'view our lates news',
+    view:'view our latest news',
     title: 'Latest News and Upcoming Events',
     quote:
-      'Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.',
+      `hello`,
   },
   {
     id: 3,
@@ -48,4 +55,4 @@ const people = [
   },
 ];
 
-export default people;
+export default People;

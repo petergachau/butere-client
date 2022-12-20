@@ -12,6 +12,9 @@ import expenseReducer from './features/expenses'
 import userReducer from './features/userCrudSlice'
 import summaryReducer from './features/summarySlice'
 import messageReducer from "./features/messageSlice";
+import modalReducer from './modal/modalSlice';
+import teacherReducer from './modal/teacherModel';
+import revisionReducer from './features/revision';
 
 export const store= configureStore({
   reducer: {
@@ -28,5 +31,8 @@ export const store= configureStore({
     user:userReducer,
     summary:summaryReducer,
     message:messageReducer,
+    modal: modalReducer,
+    teacher: teacherReducer,
+    revision:revisionReducer,
   },
 });

@@ -4,6 +4,20 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { url,setHeaders } from "./api";
 
+export const createFees = createAsyncThunk(
+  "summary/createFees",
+  async (values) => {
+    try {
+      const response = await api.createFess(values)
+
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response?.data);
+    }
+  }
+);
+
 
 export const getUsers = createAsyncThunk(
   "user/getUsers",
@@ -111,6 +125,22 @@ export const getRelatedTours = createAsyncThunk(
       error: "",
       loading: false,
     },
+
+
+    [createFees.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [createFees.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.projects = action.payload;
+    },
+    [createFees.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = action.payload.message;
+    },
+
+
+
     // reducers: {
     //   setUser: (state, action) => {
     //     state.user = action.payload;

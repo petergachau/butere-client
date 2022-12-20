@@ -8,13 +8,13 @@ const Contact = () => {
   <h3>CONTACT INFO</h3>
   <p>Welcome to our Website. We are glad to have you around.</p>
 <MdAddIcCall/> <span>Phone</span>
-<p>0722291695 </p>
+<p>056620015</p>
 <hr />
 <MdOutgoingMail/> <span>Email</span>
-<p>butereboys@gmail.com </p>
+<p>butereboys@yahoo.com </p>
 <hr />
 <MdLocationOn/> <span>Address</span>
-<p>P.O Box 15, Butere </p>
+<p>P.O Box 15-50101, Butere </p>
   <hr />
 
 </div>
@@ -26,6 +26,7 @@ const Contact = () => {
     <input type="text" placeholder='name' />
     <input type="text" placeholder='Subject' />
 <textarea  placeholder='message' name="" id="" cols="30" rows="10"></textarea>
+<button className="btn">Submit</button>
   </form>
 </div>
     </div>

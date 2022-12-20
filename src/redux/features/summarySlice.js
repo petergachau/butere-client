@@ -5,7 +5,7 @@ import axios from "axios";
 import { url,setHeaders } from "./api";
 
 export const createSummary = createAsyncThunk(
-  "summary/createSummar",
+  "summary/createSummary",
   async (values) => {
     try {
       const response = await api.createsummary(values)

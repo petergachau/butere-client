@@ -8,7 +8,7 @@ export const createProject = createAsyncThunk(
   "projects/createProject",
   async (values) => {
     try {
-      const response = await api.createTour(values)
+      const response = await api.createStudent(values)
 
       return response.data;
     } catch (error) {

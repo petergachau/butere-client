@@ -8,7 +8,7 @@ export const createMilestone = createAsyncThunk(
   "milestone/createMilestone",
   async (values) => {
     try {
-      const response = await api.createMile(values)
+      const response = await api.createMilestone(values)
 
       return response.data;
     } catch (error) {
@@ -39,18 +39,18 @@ export const getMilestoneByUser = createAsyncThunk(
     }
   }
 );
-export const deleteMilestone = createAsyncThunk(
-  "milestones/deleteMilestone",
-  async ({ id, toast }, { rejectWithValue }) => {
-    try {
-      const response = await api.deleteMilestone(id);
-      toast.success("Deleted Successfully");
-      return response.data;
-    } catch (err) {
-      return rejectWithValue(err.response.data);
-    }
-  }
-);
+// export const deleteMilestone = createAsyncThunk(
+//   "milestones/deleteMilestone",
+//   async ({ id, toast }, { rejectWithValue }) => {
+//     try {
+//       const response = await api.deleteComplain(id);
+//       toast.success("Deleted Successfully");
+//       return response.data;
+//     } catch (err) {
+//       return rejectWithValue(err.response.data);
+//     }
+//   }
+// );
   const milestoneSlice = createSlice({
     name: "milestone",
     initialState: {
@@ -104,23 +104,23 @@ export const deleteMilestone = createAsyncThunk(
         state.loading = false;
         state.error = action.payload.message;
       },
-      [deleteMilestone.pending]: (state, action) => {
-        state.loading = true;
-      },
-      [deleteMilestone.fulfilled]: (state, action) => {
-        state.loading = false;
-        const {
-          arg: { id },
-        } = action.meta;
-        if (id) {
-          state.userTours = state.userTours.filter((item) => item._id !== id);
-          state.tours = state.tours.filter((item) => item._id !== id);
-        }
-      },
-      [deleteMilestone.rejected]: (state, action) => {
-        state.loading = false;
-        state.error = action.payload.message;
-      },
+      // [deleteMilestone.pending]: (state, action) => {
+      //   state.loading = true;
+      // },
+      // [deleteMilestone.fulfilled]: (state, action) => {
+      //   state.loading = false;
+      //   const {
+      //     arg: { id },
+      //   } = action.meta;
+      //   if (id) {
+      //     state.userTours = state.userTours.filter((item) => item._id !== id);
+      //     state.tours = state.tours.filter((item) => item._id !== id);
+      //   }
+      // },
+      // [deleteMilestone.rejected]: (state, action) => {
+      //   state.loading = false;
+      //   state.error = action.payload.message;
+      // },
     
     },
   });

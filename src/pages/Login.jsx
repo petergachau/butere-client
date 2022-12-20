@@ -12,37 +12,43 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { googleSignIn, login } from "../redux/features/authSlice";
-// import { GoogleLogin } from "react-google-login";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { userAgent } from "next/server";
-
 const initialState = {
   email: "",
   password: "",
 };
 
 const Login = () => {
-  const {user}=useSelector((state)=>({...state.auth}))
   const [formValue, setFormValue] = useState(initialState);
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
   const { email, password } = formValue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {user}=useSelector((state)=>({...state.auth}))
 
+  const userId =user?.result?.role
+console.log(userId);
   useEffect(() => {
     error && toast.error(error);
   }, [error]);
 
+const handleLogin=()=>{
+
+}
+useEffect(()=>{
+  
+})
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      
-        dispatch(login({ formValue,  toast }));
-        navigate('/')
-      
-      
+      dispatch(login({ formValue, navigate, toast }));
+     
     }
+ 
+
+   
   };
   const onInputChange = (e) => {
     let { name, value } = e.target;
@@ -54,17 +60,7 @@ const Login = () => {
 
   
 
-  const googleSuccess = (resp) => {
-    const email = resp?.profileObj?.email;
-    const name = resp?.profileObj?.name;
-    const token = resp?.tokenId;
-    const googleId = resp?.googleId;
-    const result = { email, name, token, googleId };
-    dispatch(googleSignIn({ result, navigate, toast }));
-  };
-  const googleFailure = (error) => {
-    toast.error(error);
-  };
+  
 
   function Notify() {
     toast("You clicked the button");
@@ -74,29 +70,30 @@ const Login = () => {
     <>
     <ToastContainer/>
     <div style={{
-        // margin: "auto",
-        // padding: "15px",
-        // maxWidth: "750px",
-        // alignContent: "center",
-        // marginTop: "120px",
+        margin: "auto",
+        padding: "3rem",
+        width:'100%',
+        alignContent: "center",
+        flexDirection:'column',
+        gap:'2rem',
+       display:'flex',
+       alignItems:'center'
       }} className='home-main'>
         
 
+ 
    
-    </div>
-   <div
-      className="form home-main "
-    >
       
-      <div className="form-items" alignment="center">
+    <h5>{user?.result?.email}</h5>
      
         <MDBIcon fas icon="user-circle" className="fa-2x" />
-        <h5>Sign In</h5>
+       
         {/* <All/> */}
-        <MDBCardBody>
+        <MDBCardBody >
           <MDBValidation onSubmit={handleSubmit} noValidate className="row g-3">
-            <div className="col-md-12">
+            <div   className="col-md-12">
               <MDBInput
+             
                 label="Email"
                 type="email"
                 value={email}
@@ -154,11 +151,15 @@ const Login = () => {
         </MDBCardBody>
         <MDBCardFooter>
           <Link to="/register">
-            <p>Don't have an account ? Sign Up</p>
+            <p style={{fontSize:'1.3rem'}}>Don't have an account ? Sign Up</p>
+          </Link><Link to="/forget">
+            <p style={{fontSize:'1.3rem'}}>forget password</p>
           </Link>
         </MDBCardFooter>
-      </div >
-    </div></>
+       
+    
+    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   MDBCard,
   MDBCardBody,
@@ -15,32 +16,29 @@ import { toast } from "react-toastify";
 import { register } from "../redux/features/authSlice";
 
 const initialState = {
-  firstName: "",
-  lastName: "",
+
   email: "",
   password: "",
-  confirmPassword: "",
-  houseNo:"",
-  phone:"",
+  name:'',
+  clas:'',
+  role:''
 };
 
 const Register = () => {
   const [formValue, setFormValue] = useState(initialState);
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
-  const { email, password,phone, firstName, lastName, confirmPassword,houseNo } = formValue;
+  const { email, password,name,role,clas } = formValue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+console.log('values', formValue);
   useEffect(() => {
     error && toast.error(error);
   }, [error]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      return toast.error("Password should match");
-    }
-    if (email && password && firstName && lastName && email &&confirmPassword,houseNo) {
+   
+    if (email && password && name&&role&&clas ) {
       dispatch(register({ formValue, navigate, toast }));
     }
   };
@@ -50,40 +48,38 @@ const Register = () => {
   };
   return (
     <div
+    style={{
+      margin: "auto",
+      padding: "1rem",
+      width:'100%',
+      alignContent: "center",
+      flexDirection:'column',
+      gap:'2rem',
+     display:'flex',
+     alignItems:'center',
+     justifyContents:'center'
+    }} className='home-main'>
       
-      className='forms home-main'
-    >
-      <div className="form-items">
      
         <MDBIcon fas icon="user-circle" className="fa-2x" />
         <h5>Sign Up</h5>
         <MDBCardBody>
           <MDBValidation onSubmit={handleSubmit} noValidate className="row g-3">
-            <div className="col-md-6">
+          <div className="col-md-9">
               <MDBInput
-                label="First Name"
-                type="text"
-                value={firstName}
-                name="firstName"
+              
+                label="Name"
+                type="name"
+                value={name}
+                name="name"
                 onChange={onInputChange}
                 required
                 invalid
-                validation="Please provide first name"
+                validation="Please provide name"
               />
             </div>
-            <div className="col-md-6">
-              <MDBInput
-                label="Last Name"
-                type="text"
-                value={lastName}
-                name="lastName"
-                onChange={onInputChange}
-                required
-                invalid
-                validation="Please provide last name"
-              />
-            </div>
-            <div className="col-md-12">
+           
+            <div className="col-md-9">
               <MDBInput
                 label="Email"
                 type="email"
@@ -95,7 +91,7 @@ const Register = () => {
                 validation="Please provide email"
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-9">
               <MDBInput
                 label="Password"
                 type="password"
@@ -107,43 +103,35 @@ const Register = () => {
                 validation="Please provide password"
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-9">
               <MDBInput
-                label="Password Confirm"
-                type="password"
-                value={confirmPassword}
-                name="confirmPassword"
+                label='role eg Student,Teacher,Sec,Bursor,DP'
+                type="text"
+                value={role}
+                name="role"
                 onChange={onInputChange}
+                placeholder='role eg Student,Teacher,Sec,Bursor,DP'
                 required
                 invalid
-                validation="Please provide confirm password"
+                validation="Please provide role"
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-9">
               <MDBInput
-                label="House Number/name"
-                type="houseNo"
-                value={houseNo}
-                name="houseNo"
+                label='role eg Student,Teacher,Sec,Bursor,DP'
+                type="text"
+                value={clas}
+                name="clas"
                 onChange={onInputChange}
+                placeholder='role eg Student,Teacher,Sec,Bursor,DP'
                 required
                 invalid
-                validation="Please provide confirm password"
+                validation="Please provide role"
               />
             </div>
-            <div className="col-md-12">
-              <MDBInput
-                label="phone Number"
-                type="Number"
-                value={phone}
-                name="phone"
-                onChange={onInputChange}
-                required
-                invalid
-                validation="Phon number eg +257757198515"
-              />
-            </div>
-            <div className="col-12">
+           
+            
+            <div className="col-9">
               <MDBBtn style={{ width: "100%" }} className="mt-2">
                 {loading && (
                   <MDBSpinner
@@ -160,10 +148,10 @@ const Register = () => {
         </MDBCardBody>
         <MDBCardFooter>
           <Link to="/login">
-            <p>Already have an account ? Sign In</p>
+            <p style={{fontSize:'1.3rem',marginBottom:'1rem'}}>Already have an account ? Sign In</p>
           </Link>
         </MDBCardFooter>
-      </div>
+     
     </div>
   );
 };

@@ -5,15 +5,18 @@ import axios from "axios";
 
 export const createCareTaker = createAsyncThunk(
   "caretaker/createCareTaker",
-  async (updateddata) => {
+  async ({updateddata,id,toast}) => {
     try {
-      const response = await api.createCareTaker(updateddata)
-
-      return response.data;
-    } catch (error) {
-      console.log(error);
-      toast.error(error.response?.data);
-    }
+      const res= await api.createCareTakers(updateddata);
+      toast.success('tour created successfuly')
+   //    navigate('/') 
+      return res.data
+   } catch (error) {
+       // toast.success('Error while trying to login')
+       return (error.message.data)
+      
+   }
+   
   }
 );
 // export const getProjects = createAsyncThunk(

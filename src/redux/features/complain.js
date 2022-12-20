@@ -33,7 +33,7 @@ export const getProjectsByUser = createAsyncThunk(
   "tour/getProjectsByUser",
   async (userId, { rejectWithValue }) => {
     try {
-      const response = await api.getProjectsByUser(userId);
+      const response = await api.getTeacherByUser(userId);
       return response.data;
     } catch (err) {
       return rejectWithValue(err.response.data);

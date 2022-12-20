@@ -7,7 +7,7 @@ const Footer = () => {
       
           copyright&copy;{new Date().getFullYear()}
           <span>WebDev</span> &nbsp;<br/><span> all rights reserved</span>
-          <span> &nbsp; developed by mary</span>
+          <span> &nbsp; developed by navi</span>
        
         
     </div>

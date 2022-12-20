@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-const api= 'http://localhost:5000'
+const api= 'https://butere.onrender.com'
 
 export const login = createAsyncThunk(
   "auth/login",
@@ -8,10 +8,24 @@ export const login = createAsyncThunk(
     try {
       const response = await  axios.post(`${api}/signin`,formValue);
       toast.success("Login Successfully");
-      // navigate("/");
+      navigate('/control')
       return response.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
+    }
+  }
+);
+
+export const forgetPassword = createAsyncThunk(
+  "auth/login",
+  async ({ formValue, navigate, toast }, { rejectWithValue }) => {
+    try {
+      const response = await  axios.post(`${api}/forgotpassword`,formValue);
+      toast.success("send Successfully");
+      navigate('/login')
+      return response.data;
+    } catch (err) {
+      return rejectWithValue('check your email');
     }
   }
 );
@@ -86,6 +100,19 @@ const authSlice = createSlice({
       state.loading = false;
       state.error = action.payload.message;
     },
+    [forgetPassword.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [forgetPassword.fulfilled]: (state, action) => {
+      state.loading = false;
+      localStorage.setItem("profile", JSON.stringify({ ...action.payload }));
+      state.user = action.payload;
+    },
+    [forgetPassword.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = action.payload.message;
+    },
+
     [register.pending]: (state, action) => {
       state.loading = true;
     },

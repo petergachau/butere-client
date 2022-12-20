@@ -16,10 +16,10 @@ const Form4East = () => {
 
     <div className="activities">
         <div className="students-titles">
-            <p>sports:Football</p>
-        <p>clubs:Football</p>
-        <p>Responsibilities:Football</p>
-        <p>Achievements: None</p> 
+            <h6>sports:Football</h6>
+        <h6>clubs:Football</h6>
+        <h6>Responsibilities:Football</h6>
+        <h6>Achievements: None</h6> 
         </div>
         <div className="displine">
             <h4>Discipline review: 
